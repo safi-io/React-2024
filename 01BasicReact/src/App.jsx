@@ -6,16 +6,21 @@ import Headline from "./Headline.jsx";
 import ProdcutContainer from "./ProductContainer.jsx";
 
 
+function clickHandle(e) {
+  console.log(e.target)
+}
+
+
 function App() {
   return (
     <>
-      <Headline />
+      <Headline />  
       <ProdcutContainer  direction = "reverse" />
-      &nbsp;
-      <ProdcutContainer/>
+
+      <button onClick={clickHandle}>Click me!</button>
       
     </>
-  );
-}''
+  );  
+}
 
 export default App;
