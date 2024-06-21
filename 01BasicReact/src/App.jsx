@@ -1,25 +1,21 @@
-import {Title} from "./Title.jsx"
-import Faang from "./Faang.jsx"
+// import Title from "./Title.jsx"
+// import Faang from "./Faang.jsx"
 // import RulesJSX from "./Rules.jsx"
+// import Activity from "./Active.jsx";
+import Headline from "./Headline.jsx";
+import ProdcutContainer from "./ProductContainer.jsx";
 
-// We can change name here when importing.
 
 function App() {
   return (
-      // Below is React Fragment(Empty Closing, Opening Tag), (To avoid extra node)
     <>
-
-      {/* <Title />or, <Title></Title> */}
+      <Headline />
+      <ProdcutContainer  direction = "reverse" />
+      &nbsp;
+      <ProdcutContainer/>
       
-      <Title headline="Pakistan"/>   
-      <Title headline={69}/> 
-
-      <Faang title = "FAANG" companies={["facebook", "amazon", "apple","netflix", "google"]}/>
-
-      <Faang title = "MAANG" companies={["meta", "apple", "amazon","netflix", "google"]}/>
-
     </>
   );
-}
+}''
 
 export default App;
