@@ -4,7 +4,7 @@ export default function LikeButton() {
   let [like, setLike] = useState(false);
 
   let toggleLike = () => {
-    setLike(!like); // Can add more state variables to a single component
+    setLike(!like); // Can add more state variables to a single component, Value update on render stage(not on function call)!
   };
 
   let styles = {
