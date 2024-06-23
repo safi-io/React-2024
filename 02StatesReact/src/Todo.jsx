@@ -15,7 +15,7 @@ export default function Todo() {
       alert("Write Something");
       return;
     }
-    setTasks([...tasks, { task: input, id: uuidv4() }]);
+    setTasks([...tasks, { task: input, id: uuidv4() , isDone: false}]);
     setInput("");
   };
 
@@ -30,6 +30,21 @@ export default function Todo() {
     ) ));
   }
 
+  let updateFunc = (id)=> {
+    setTasks(tasks.map((task) => {
+      if(task.id == id) {
+        return {
+          ...task,
+          isDone : !task.isDone
+        }
+      }
+      else {
+        return task;
+      }
+    }))
+  }
+
+
 
   return (
     <>
@@ -43,7 +58,7 @@ export default function Todo() {
       <button onClick={updateButton}>Click Me!</button>
       <ul>
         {tasks.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} style={{ textDecoration: todo.isDone ? "line-through" : ""}}>
             <span>{todo.task}</span>
             <button
               onClick={() => {
@@ -52,6 +67,16 @@ export default function Todo() {
             >
               Delete
             </button>
+
+            <button
+              onClick={() => {
+                updateFunc(todo.id);
+              }}
+            >
+              Update
+            </button>
+
+
           </li>
         ))}
       </ul>
