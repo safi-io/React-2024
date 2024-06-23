@@ -3,9 +3,12 @@
 // import Ludo from "./Ludo.jsx";
 // import Todo from "./Todo.jsx"
 
+import Lottery from "./Lottery";
+
 function App() {
   return (
     <>
+        <Lottery/>
     </>
   );
 }
