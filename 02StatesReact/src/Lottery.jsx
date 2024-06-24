@@ -12,20 +12,16 @@ export default function Lottery() {
 
   let updateTarget = (e) => {
     setTarget(Number(e.target.value));
-  }
-
+  };
 
   return (
     <>
-        <h1>Put Target</h1>
-      <input type="text" onChange={updateTarget} /> <br/>
-
+      <h1>Put Target</h1>
+      <input type="text" onChange={updateTarget} /> <br />
       <h1>Lottery Number</h1>
-     
       <span>{arr[0]}</span>
       <span>{arr[1]}</span>
       <span>{arr[2]}</span>
-
       <h3>{isEqual && "Congratulations, you won"}</h3>
       <button onClick={genNew}>Replay</button>
     </>
