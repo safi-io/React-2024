@@ -18,7 +18,7 @@ export default function Lottery() {
     <>
       <h1>Put Target</h1>
       <input type="text" onChange={updateTarget} /> <br />
-      <h1>Lottery Number</h1>
+      <h1>Lottery Numbers</h1>
       <span>{arr[0]}</span>
       <span>{arr[1]}</span>
       <span>{arr[2]}</span>
