@@ -1,10 +1,19 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Technologies from "./components/Technologies";
 
 function App() {
-  return(
+  return (
     <>
-      <h1 className="text-red-600">Hello from </h1>
+
+      <Navbar />
+      <Hero />
+      <About/>
+      <Technologies />
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

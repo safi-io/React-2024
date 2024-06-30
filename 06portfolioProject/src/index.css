@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+    max-width: 75%;
+    margin: auto;
 }
