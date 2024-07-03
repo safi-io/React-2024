@@ -1,10 +1,11 @@
-function App() {
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-  return (
-    <>
-     <h1 className="text-yellow-500">Hello World</h1>
-    </>
-  )
+export default function App() {
+    return(
+        <>
+        <Navbar/>
+        <Outlet/>
+        </>
+    );
 }
-
-export default App
