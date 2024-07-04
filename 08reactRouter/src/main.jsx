@@ -4,18 +4,20 @@ import App from './App'
 import Error from './components/Error'
 import Login from "./components/Login"
 import ProductArea from "./components/ProductArea"
+import Navbar from './components/Navbar'
 import './index.css'
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Github from './components/Github'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <><App/></>,
-    errorElement: <Error/>,
+    errorElement: <><Navbar/><Error/></>,
     children: [
       {
         index: true,
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <><Login/></>
+      },
+      {
+        path: "/github",
+        element: <><Github/></>
       }
     ]
   },

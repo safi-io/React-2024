@@ -11,16 +11,18 @@ export default function Navbar() {
             </div>
             <div>
                 <ul className="flex items-center justify-center gap-3 font-medium">
-                    <a href=""><li>MENU</li></a>
-                    <a href=""><li>LOCATION</li></a>
-                    <a href=""><li>ABOUT</li></a>
-                    <a href=""><li>CONTACT</li></a>
+                    <Link to=""><li>MENU</li></Link>
+                    <Link to=""><li>LOCATION</li></Link>
+                    <Link to=""><li>ABOUT</li></Link>
+                    <Link to="/github"><li>GITHUB</li></Link>
                 </ul>
             </div>
             <div>
+                <Link to={"/login"}>
                 <button className="bg-[#D01C28] text-white p-2 px-4">
-                    <Link to={"/login"}>Login</Link>
+                    Login
                 </button>
+                </Link>
             </div>
         </nav>
     );
